@@ -224,7 +224,7 @@ def test_analyzeCases(index_and_model, plotPSDs=False, flagSaveValues=False):
         with open(true_values_file, 'rb') as f:
             true_values = pickle.load(f)
 
-    # Check compute results against previously computed true values
+    # Check computed results against previously computed true values
     nCases = len(model.results['case_metrics'])
     for iCase in range(nCases):
         for ifowt in range(model.nFOWT):
