@@ -264,28 +264,25 @@ def test_analyzeCases(index_and_model, plotPSDs=False, flagSaveValues=False):
  To run as a script. Useful for debugging.
 '''
 if __name__ == "__main__":
-    # index = 0
+    index = 0
     
-    # model = create_model(list_files[index])
-    # test_solveStatics_Wind((index,model))
+    model = create_model(list_files[index])
+    test_solveStatics_Wind((index,model))
 
-    # model = create_model(list_files[index])
-    # test_solveStatics_Wave((index,model))
+    model = create_model(list_files[index])
+    test_solveStatics_Wave((index,model))
 
-    # model = create_model(list_files[index])
-    # test_solveStatics_Current((index,model))
+    model = create_model(list_files[index])
+    test_solveStatics_Current((index,model))
 
-    # model = create_model(list_files[index])
-    # test_solveStatics_Wind_Wave_Current((index,model))
+    model = create_model(list_files[index])
+    test_solveStatics_Wind_Wave_Current((index,model))
 
-    # model = create_model(list_files[index])
-    # test_solveEigen_unloaded((index,model))
+    model = create_model(list_files[index])
+    test_solveEigen_unloaded((index,model))
 
-    # model = create_model(list_files[index])
-    # test_solveEigen_loaded((index,model))
+    model = create_model(list_files[index])
+    test_solveEigen_loaded((index,model))
 
-    # model = create_model(list_files[index])
-    # test_analyzeCases((index,model), plotPSDs=True, flagSaveValues=False)
-    for index in [0,1,2]:
-        model = create_model(list_files[index])
-        test_analyzeCases((index,model), plotPSDs=True, flagSaveValues=True)
+    model = create_model(list_files[index])
+    test_analyzeCases((index,model), plotPSDs=True, flagSaveValues=False)
