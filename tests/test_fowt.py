@@ -213,7 +213,8 @@ def test_hydroConstants(index_and_fowt):
 
 def test_hydroExcitation(index_and_fowt, flagSaveValues=False):
     # Set flagSaveValues to true to replace the true values file with the values calculated below
-    index, fowt = index_and_fowt        
+    index, fowt = index_and_fowt    
+    
     true_values_file = list_files[index].replace('.yaml', '_true_hydroExcitation.pkl')
     output_true_values = []
     
@@ -252,6 +253,8 @@ def test_hydroExcitation(index_and_fowt, flagSaveValues=False):
 def test_hydroLinearization(index_and_fowt, flagSaveValues=False):
     # Set flagSaveValues to true to replace the true values file with the values calculated below
     index, fowt = index_and_fowt
+
+    # Set this flag to true to replace the true values file
     true_values_file = list_files[index].replace('.yaml', '_true_hydroLinearization.pkl')
 
     testCase = {'wave_spectrum': 'unit', 'wave_heading': 0, 'wave_period': 10, 'wave_height': 2} # Currently we need to specify wave period and height, even though they are not used for unit spectrum
